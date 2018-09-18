@@ -2,6 +2,7 @@
 #Skilgreina hvaða áttir eru valid fyrir hvern stað
 #passa að hafa átt bara sem lítinn staf, þ.e breyta í lítinn staf ef sleginn er inn stór stafur
 #Finna út nýja gildi á start miðað við hvaða átt er slegin inn
+#Halda áfram í while lykkju þangað til við erum komin á reit 3.1, þá er búið að vinna
 
 start = 1.1
 
@@ -47,7 +48,6 @@ while start != 3.1 :
             start -= 0.1
         elif direction == "w":
             start -= 1
-        print("{:.1f}" .format(start))
         start = round(start, 1)
     else:
         print("Not a valid direction!")
@@ -62,7 +62,6 @@ while start != 3.1 :
                 start -= 0.1
             elif direction == "w":
                 start -= 1
-        print("{:.1f}" .format(start))
         start = round(start, 1)
 else:
     print("Victory!")
