@@ -5,10 +5,11 @@
 #Halda áfram í while lykkju þangað til við erum komin á reit 3.1, þá er búið að vinna
 
 #1. Which implementation was easier and why?
-    #
+    #Myndi segja að fyrri gerðin hafi verið auðveldari af því að við erum búin að vera forrita meira þannig.
+    #Meira sem þarf að hugsa og spá í þegar verið er að búa til föll
 #2. Which implementation is more readable and why?
     #Seinna forritið, það með föllunum. Þá þarf ekki endalaust að skrifa það sama aftur og aftur.
-    # Aðal kóðinn verður styttri og ef föllin eru með nógu lýsandi nöfnum þá ætti að vera skiljanlegt hvað er í gangi í hverju falli
+    #Aðal kóðinn verður styttri og ef föllin eru með nógu lýsandi nöfnum þá ætti að vera skiljanlegt hvað er í gangi í hverju falli
 #3. Which problems in the first implementations were you able to solve with the latter implementation?
 
 def x_and_y(x,y):
@@ -16,11 +17,13 @@ def x_and_y(x,y):
     return x,y
 
 def Get_direction():
+    '''Fá átt frá notanda'''
     a = input("Direction: ")
     a = a.lower()
     return a
 
 def Get_valid_direction(a):
+    '''Athuga hvaða áttir séu í boði fyrir hverja staðsetningu'''
     if a == 1:
         if start_y == 1:
             valid_direction = "n"
@@ -54,6 +57,7 @@ def Get_valid_direction(a):
     return valid_direction
 
 def Get_new_x_and_y (d, x, y):
+    '''Uppfæra gildi á x og y'''
     if d == "n":
         y += 1
     elif d == "e":
@@ -65,6 +69,7 @@ def Get_new_x_and_y (d, x, y):
     return x, y
 
 def If_valid_direction(d, v, x, y):
+    '''Athuga hvort átt sem slegin var inn sé í boði'''
     if d in v:
         x, y = Get_new_x_and_y(direction, start_x, start_y)    
     else:
