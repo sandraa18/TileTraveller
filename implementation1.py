@@ -29,35 +29,35 @@ def Get_valid_direction(a):
     '''Athuga hvaða áttir séu í boði fyrir hverja staðsetningu'''
     if a == 1:
         if start_y == 1:
-            valid_direction = "n"
+            v_d = "n"
             print("You can travel: (N)orth.")
         elif start_y == 2:
-            valid_direction = "nes"
+            v_d = "nes"
             print("You can travel: (N)orth or (E)ast or (S)outh.")
         elif start_y == 3:
-            valid_direction = "es"
-            print("You can travel: (E)ast or (S)outh.")   
+            v_d = "es"
+            print("You can travel: (E)ast or (S)outh.")
     elif a == 2:
         if start_y == 1:
-            valid_direction = "n"
+            v_d = "n"
             print("You can travel: (N)orth.")
         elif start_y == 2:
-            valid_direction = "ws"
+            v_d = "ws"
             print("You can travel: (S)outh or (W)est.")
         elif start_y == 3:
-            valid_direction = "ew"
+            v_d = "ew"
             print("You can travel: (E)ast or (W)est.")
     elif a == 3:
         if start_y == 1:
-            valid_direction = "n"
+            v_d = "n"
             print("You can travel: (N)orth.")
         elif start_y == 2:
-            valid_direction = "ns"
+            v_d = "ns"
             print("You can travel: (N)orth or (S)outh.")
         elif start_y == 3:
-            valid_direction = "ws"
+            v_d = "ws"
             print("You can travel: (S)outh or (W)est.")
-    return valid_direction
+    return v_d
 
 def Get_new_x_and_y (d, x, y):
     '''Uppfæra gildi á x og y'''
@@ -78,7 +78,8 @@ def If_valid_direction(d, v, x, y):
     else:
         print ("Not a valid direction!")
         d = Get_direction()
-        x, y = Get_new_x_and_y(direction, start_x, start_y)
+        if d in v:
+            x, y = Get_new_x_and_y(d, start_x, start_y)
     return x, y
 
     
