@@ -11,6 +11,9 @@
     #Seinna forritið, það með föllunum. Þá þarf ekki endalaust að skrifa það sama aftur og aftur.
     #Aðal kóðinn verður styttri og ef föllin eru með nógu lýsandi nöfnum þá ætti að vera skiljanlegt hvað er í gangi í hverju falli
 #3. Which problems in the first implementations were you able to solve with the latter implementation?
+    #Læsilegri kóði
+    #Aðal kóðinn er styttri
+    #Skiljanlegra fyrir aðra sem vilja skoða kóðann
 
 def x_and_y(x,y):
     ''' Upphafsgildi á x og y '''
